@@ -5,7 +5,8 @@
     --coral-pink: #e8998dff;
     --pale-dogwood: #eed2ccff;
     --isabelline: #fbf7f4ff;
-    --light-blue: rgba(34, 157, 224, 0.986); /* Neues helles Blau */
+    --light-blue: rgba(34, 157, 224, 0.986);
+    /* Neues helles Blau */
 }
 
 /* CSS HSL */
@@ -14,11 +15,13 @@
     --coral-pink-hsl: hsla(8, 66%, 73%, 1);
     --pale-dogwood-hsl: hsla(11, 50%, 87%, 1);
     --isabelline-hsl: hsla(26, 47%, 97%, 1);
-    --light-blue-hsl: hsla(200, 50%, 80%, 1); /* Neues helles Blau */
+    --light-blue-hsl: hsla(200, 50%, 80%, 1);
+    /* Neues helles Blau */
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth Scrolling für die gesamte Seite */
+    scroll-behavior: smooth;
+    /* Smooth Scrolling für die gesamte Seite */
 }
 
 body {
@@ -49,9 +52,34 @@ nav {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -300px;
+    /* Move fully off screen */
     overflow-y: auto;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    /* Ensures nav is above other content */
+    transition: left 0.3s ease;
+    /* Smooth transition for sliding */
+}
+
+#toggle-nav {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: var(--light-blue);
+    color: var(--isabelline);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensures button is above other content */
+    transition: left 0.3s ease;
+    /* Smooth transition for sliding */
+}
+
+nav.open {
+    left: 0;
 }
 
 nav h2 {
@@ -77,12 +105,13 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: var(--coral-pink);
 }
 
 main {
-    margin-left: 240px;
+    margin-left: 300px;
     padding: 1rem;
     flex-grow: 1;
     transition: margin-left 0.3s ease;
@@ -93,15 +122,19 @@ section {
     background: var(--isabelline);
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    /* Stronger shadow */
 }
 
 /* Abstand zwischen den Sections */
-section + section {
+section+section {
     margin-top: 5rem;
 }
 
-h2, h3, h4, h5 {
+h2,
+h3,
+h4,
+h5 {
     color: var(--cambridge-blue);
 }
 
@@ -125,10 +158,9 @@ img {
 /* Mobile Navigation */
 @media (max-width: 768px) {
     nav {
-        position: absolute;
+        position: fixed;
         width: 220px;
-        left: -240px;
-        transition: left 0.3s ease;
+        left: -300px;
     }
 
     nav.open {
@@ -139,14 +171,28 @@ img {
         margin-left: 0;
     }
 
-    .toggle-nav {
-        position: fixed;
-        top: 1rem;
+    #toggle-nav {
         left: 1rem;
-        background: var(--light-blue);
-        color: var(--isabelline);
-        border: none;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
+    }
+}
+
+/* Styles for PC */
+@media (min-width: 769px) {
+    nav {
+        left: -300px;
+        /* Move fully off screen */
+    }
+
+    nav.open {
+        left: 0;
+    }
+
+    #toggle-nav {
+        left: 1rem;
+    }
+
+    main {
+        margin-left: 300px;
+        /* Adjust margin to account for nav width */
     }
 }
