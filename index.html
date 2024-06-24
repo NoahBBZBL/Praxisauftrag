@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praxisaufträge Datenbanken - Noah Beetschen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Praxisaufträge Datenbanken</h1>
@@ -13,72 +15,777 @@
     </header>
 
     <nav>
+        <h2>Inhaltsverzeichnis</h2>
         <ul>
-            <li><a href="#praxisauftrag1">Praxisauftrag 1: Was ist eigentlich eine Datenbank?</a></li>
-            <li><a href="#praxisauftrag2">Praxisauftrag 2: Wie installiert man cx_Oracle Package mit & ohne PIP?</a></li>
-            <li><a href="#praxisauftrag3">Praxisauftrag 3: Welche Tools werden in dem Datenbanken-Team verwendet?</a></li>
-            <li><a href="#praxisauftrag4">Praxisauftrag 4: Wie setzt man eine Linux-Testdatenbank (ORATWSB) neu auf?</a></li>
-            <li><a href="#praxisauftrag5">Praxisauftrag 5: Welche Probleme gibt es beim Installieren einer SAP Datenbank</a></li>
-            <li><a href="#praxisauftrag6">Praxisauftrag 6: Wie funktioniert das initScriptReplacer Skript?</a></li>
+            <li><a href="#praxisauftrag1">Praxisauftrag 1</a></li>
+            <li><a href="#praxisauftrag2">Praxisauftrag 2</a>
+            </li>
+            <li><a href="#praxisauftrag3">Praxisauftrag 3</a>
+            </li>
+            <li><a href="#praxisauftrag4">Praxisauftrag 4</a>
+            </li>
+            <li><a href="#praxisauftrag5">Praxisauftrag 5</a></li>
+            <li><a href="#praxisauftrag6">Praxisauftrag 6</a></li>
+            <li><a href="#taetigkeiten">Wichtigste Tätigkeiten</a></li>
+
         </ul>
     </nav>
 
     <main>
         <section id="praxisauftrag1">
             <h2>Praxisauftrag 1: Was ist eigentlich eine Datenbank?</h2>
-            <p>Eine Datenbank ist eine geordnete Sammlung von Daten, die elektronisch gespeichert und organisiert wird. ...</p>
-            <!-- Add the rest of your content here -->
-            <img src="placeholder1.jpg" alt="Datenbankmodellierung Bild 1">
-            <!-- Add more content and images as needed -->
+            <p>Eine Datenbank ist eine geordnete Sammlung von Daten, die elektronisch gespeichert und organisiert wird.
+                Sie hilft dabei, Informationen effizient zu speichern, abzurufen und zu verwalten. Mit einem
+                Datenbankmanagementsystem (DBMS) können Benutzer und Programme leicht auf die Daten zugreifen und sie
+                bearbeiten. Sie sorgen dafür, dass grosse Datenmengen schnell und zuverlässig verarbeitet werden können.
+                Ausserdem ermöglichen sie die Sicherheit und Integrität der gespeicherten Daten.</p>
+
+            <h3>Datenbankmodellierung</h3>
+            <h4>Tabellen</h4>
+            <p>Eine Datenbank organisiert Daten in Tabellen, ähnlich wie in Excel oder Google Sheets. Jede Tabelle hat
+                einen Namen und besteht aus Attributen, die die verschiedenen Arten von Informationen beschreiben, die
+                in der Tabelle gespeichert werden.</p>
+
+            <h4>Attribute</h4>
+            <p>Attribute sind die Spalten in einer Tabelle und beschreiben, welche Arten von Daten in den Datensätzen
+                enthalten sind. Sie definieren auch den Datentyp und ob ein Wert leer sein kann oder nicht.</p>
+
+            <h4>Datensatz</h4>
+            <p>Ein Datensatz entspricht einer Zeile in einer Tabelle und repräsentiert einen vollständigen Satz von
+                Informationen für eine bestimmte Entität oder Objekt. Diese werden meistens durch einen Zahlenwert oder
+                sonstige ID differenziert.</p>
+
+            <h4>Primary Key</h4>
+            <p>Ein Primary Key ist ein eindeutiger Identifikator für einen Datensatz in einer Tabelle. Er sorgt dafür,
+                dass jeder Datensatz eindeutig identifizierbar ist.</p>
+
+            <h4>Entität</h4>
+            <p>Eine Entität repräsentiert etwas Greifbares oder Abstraktes in der realen Welt, wie zum Beispiel ein
+                Produkt, einen Kunden oder eine Bestellung.</p>
+
+            <h3>SQL</h3>
+            <p>SQL wird verwendet, um Daten in Datenbanken zu speichern, zu manipulieren und abzurufen. Daten aus einer
+                Datenbank können mit SQL abgerufen, eingefügt, aktualisiert und gelöscht werden. Es ist auch möglich,
+                neue Datenbanken zu erstellen und neue Tabellen, Ansichten und Joins zu erstellen. Berechtigungen für
+                Tabellen, Prozeduren und Ansichten (Views) erstellen eine weitere Funktion.</p>
+
+            <h4>Statements</h4>
+            <p>Hier sind ein paar der wichtigsten SQL-Statements:</p>
+            <ul>
+                <li>SELECT - extrahiert Daten aus einer Datenbank</li>
+                <li>UPDATE - aktualisiert Daten in einer Datenbank</li>
+                <li>DELETE - löscht Daten aus einer Datenbank</li>
+                <li>INSERT INTO - fügt neue Daten in eine Datenbank ein</li>
+                <li>CREATE DATABASE - erstellt eine neue Datenbank</li>
+                <li>ALTER DATABASE - ändert eine Datenbank</li>
+                <li>CREATE TABLE - erstellt eine neue Tabelle</li>
+                <li>ALTER TABLE - ändert eine Tabelle</li>
+                <li>DROP TABLE - löscht eine Tabelle</li>
+                <li>CREATE INDEX - erstellt einen Index (Suchschlüssel)</li>
+                <li>DROP INDEX - löscht einen Index</li>
+            </ul>
+
+            <h4>Syntax</h4>
+            <p>SQL-Statements sind nicht case sensitive: select ist also das gleiche wie SELECT.</p>
+
+            <h4>Queries</h4>
+            <p>Auf deutsch auch Abfragen genannt, sind Anweisungen, die verwendet werden, um Daten aus einer Datenbank
+                zu verarbeiten → suchen, abzurufen, manipulieren und löschen. Diese Anfragen an die Datenbank können mit
+                spezifischen Daten bestimmte Kriterien beinhalten, um nur bestimmte Daten, welche dann auf irgendeine
+                Weise geändert werden. Jedoch werden die Queries differenziert, da sie verschiedenen Zwecke dienen:</p>
+
+            <h3>Data Manipulation Language (DML)</h3>
+            <h4>INSERT</h4>
+            <p>Der INSERT-Befehl fügt neue Datensätze in eine Tabelle ein.</p>
+            <pre>
+                INSERT INTO kunden (kunden_id, name, stadt)
+                VALUES (1, 'Mustermann', Basel);
+            </pre>
+
+            <h4>SELECT</h4>
+            <p>Der SELECT-Befehl wird verwendet, um Daten aus einer oder mehreren Tabellen abzurufen.</p>
+            <pre>
+                SELECT name, stadt FROM kunden WHERE stadt = 'Basel';
+            </pre>
+
+            <h4>DELETE</h4>
+            <p>Der DELETE-Befehl löscht Datensätze aus einer Tabelle.</p>
+            <pre>
+                DELETE FROM kunden WHERE name = 'Mustermann';
+            </pre>
+
+            <h3>Data Definition Language (DDL)</h3>
+            <h4>CREATE</h4>
+            <p>Der CREATE-Befehl wird verwendet, um neue Datenbankobjekte wie Datenbanken, Tabellen, Indizes usw. zu
+                erstellen.</p>
+            <pre>
+                CREATE TABLE kunden (
+                    kunden_id INT PRIMARY KEY,
+                    name VARCHAR(50),
+                    stadt VARCHAR(50)
+                );
+            </pre>
+
+            <h4>ALTER</h4>
+            <p>Der ALTER-Befehl wird verwendet, um bestehende Datenbankobjekte zu ändern.</p>
+            <pre>
+                ALTER TABLE kunden
+                ADD geburtsdatum DATE;
+            </pre>
+
+            <h4>DROP</h4>
+            <p>Der DROP-Befehl wird verwendet, um bestehende Datenbankobjekte zu löschen.</p>
+            <pre>
+                DROP TABLE kunden;
+            </pre>
+
+            <h4>RENAME</h4>
+            <p>Der RENAME-Befehl wird verwendet, um Datenbankobjekte umzubenennen.</p>
+            <pre>
+                ALTER TABLE kunden
+                RENAME TO customer;
+            </pre>
+
+            <h4>Unterschied DML und DDL</h4>
+            <p>Wie bereits erwähnt, dienen die Queries DML und DDL verschiedenen Zwecken. Wobei DDL dafür verwendet
+                wird, die Struktur der Datenbank und ihrer Objekten zu definieren und zu ändern, wird DML dafür
+                verwendet, um Daten innerhalb der bestehenden Datenbankstrukturen zu verändern. DML-Befehle fügen Daten
+                hinzu, rufen sie ab, aktualisieren oder löschen diese. DDL-Befehle erstellen, ändern und löschen
+                Datenbankobjekte wie Tabellen, Indizes, Schemata oder Benutzer. Sie ändern die physische und logische
+                Struktur der Datenbank. DML-Befehle fügen Daten hinzu, rufen sie ab, aktualisieren sie oder löschen sie.
+                Sie ändern den Inhalt der Datenbank, nicht die Struktur. Ausserdem können DDL-Befehle nicht
+                zurückgenommen werden (ausser mit einem Backup oder Flashback), im Gegensatz zu DML-Befehle, welche
+                durch Transaktionen kontrolliert und somit wieder rückgängig gemacht werden können.</p>
         </section>
 
         <section id="praxisauftrag2">
             <h2>Praxisauftrag 2: Wie installiert man cx_Oracle Package mit & ohne PIP?</h2>
             <h3>Einleitung</h3>
-            <p>In diesem Artikel wird beschrieben, wie cx_Oracle Packages korrekt installiert werden. ...</p>
-            <!-- Add the rest of your content here -->
-            <img src="placeholder2.jpg" alt="cx_Oracle Installation Bild 1">
-            <!-- Add more content and images as needed -->
+            <p>In diesem Artikel wird beschrieben, wie cx_Oracle Packages korrekt installiert werden. Es werden sowohl
+                die Variante mit PIP als auch die Variante ohne PIP erklärt. Offizieller Oracle-Guide: <a
+                    href="https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html">https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html</a>
+            </p>
+
+            <h3>Installation mit PIP</h3>
+            <h4>Schritt 1: Voraussetzungen überprüfen</h4>
+            <p>Stelle sicher, dass du Python und PIP installiert hast. Du kannst dies überprüfen, indem du diese Befehle
+                in deinem Terminal eingibst:</p>
+            <pre>
+                python --version
+                pip --version
+            </pre>
+
+            <h4>Schritt 2: Installation mit PIP</h4>
+            <p>Öffne dein Terminal oder die Befehlszeile und führe den folgenden Befehl aus:</p>
+            <pre>
+                pip install cx_Oracle
+            </pre>
+
+            <h4>Schritt 3: Überprüfen der Installation</h4>
+            <p>Nachdem die Installation abgeschlossen ist, kannst du die Installation überprüfen, indem du versuchst,
+                cx_Oracle in Python zu importieren:</p>
+            <pre>
+                import cx_Oracle
+            </pre>
+
+            <h3>Installation ohne PIP</h3>
+            <h4>Schritt 1: Voraussetzungen überprüfen</h4>
+            <p>Stelle sicher, dass du Python installiert hast. Du kannst dies überprüfen, indem du den folgenden Befehl
+                in deinem Terminal eingibst:</p>
+            <pre>
+                python --version
+            </pre>
+
+            <h4>Schritt 1: Herunterladen des Pakets</h4>
+            <p>Gehe zur offiziellen cx_Oracle-Website oder zu einem Python-Paket-Repository und lade das entsprechende
+                Paket herunter, das mit deiner Python-Version kompatibel ist. Es wird normalerweise als ZIP-Datei
+                bereitgestellt. <a
+                    href="https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html">https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html</a>
+            </p>
+
+            <h4>Schritt 2: Entpacken des Pakets</h4>
+            <p>Entpacke die heruntergeladene ZIP-Datei in ein sicheres und einfach zu findendes Verzeichnis.</p>
+
+            <h4>Schritt 3: Installation des Pakets</h4>
+            <p>Navigiere im Terminal in das Verzeichnis, in dem du das Paket entpackt hast. Führe dann den folgenden
+                Befehl aus:</p>
+            <pre>
+                python setup.py install
+            </pre>
+
+            <h4>Schritt 4: Überprüfen der Installation</h4>
+            <p>Wie zuvor kannst du die Installation überprüfen, indem du versuchst, cx_Oracle in Python zu importieren:
+            </p>
+            <pre>
+                import cx_Oracle
+            </pre>
         </section>
 
         <section id="praxisauftrag3">
             <h2>Praxisauftrag 3: Welche Tools werden in dem Datenbanken-Team verwendet?</h2>
             <h3>Tools</h3>
-            <p>PuTTY/SuperPuTTY: Putty ist eine Software, mit der man sich über SSH mit Servern verbinden kann. ...</p>
-            <!-- Add the rest of your content here -->
+            <h4>PuTTY/SuperPuTTY:</h4>
+            <p>Putty ist eine Software, mit der man sich über SSH mit Servern verbinden kann. Diese Applikation hat eine
+                einfache Benutzeroberfläche (siehe Bild 1) mit einigen Konfigurationen. SuperPuTTY basiert auf PuTTY und
+                macht somit eigentlich das gleiche wie PuTTY. SuperPuTTY ist somit eigentlich eine Erweiterung, die eine
+                bessere Benutzeroberfläche und zusätzliche, nützliche Features hinzufügt. Durch das Importieren der
+                sogenannten Sessions, kann man sich per Knopfdruck mit einem Server verbinden (Siehe Bild 3). Ausserdem
+                kann man bereits vor dem Öffnen der Session einen User eingeben, so dass man beim Öffnen von mehreren
+                Sessions schnell öffnen kann, ohne den Benutzer und nur das Passwort eingeben zu müssen (Siehe Bild 4).
+                Im Gegensatz dazu muss man beim Verwenden von PuTTY für jede neue Session ein neues Command-Fenster
+                öffnen, was schnell sehr unübersichtlich wird (Siehe Bild 2). SuperPuTTY jedoch behält alle Session in
+                einem Fenster, welche durch Tabs geöffnet, dupliziert, umbenannt, neu gestartet oder geschlossen werden
+                können.</p>
             <img src="placeholder3.jpg" alt="PuTTY/SuperPuTTY Bild 1">
-            <!-- Add more content and images as needed -->
+
+            <h4>OEM (Oracle Enterprise Manager):</h4>
+            <p>Der OEM ist ein sehr nützliches und umfangreiches Tool für die Verwaltung und Wartung von
+                Oracle-basierten Servern und Datenbanken. Dieses Tool wird in dem Team sehr viel benutzt, da wir
+                hauptsächlich Oracle Datenbanken benutzen. Jedoch kann ich hier nicht ins Detail gehen, da dies den
+                Rahmen der Doku sprengen würde:</p>
+
+            <h4>Toad for Oracle:</h4>
+            <p>Ein vielseitiges Tool für die Entwicklung, Verwaltung und Optimierung von Oracle-Datenbanken. Wird
+                meistens in Zusammenarbeit mit dem OEM verwendet.</p>
+
+            <h4>SQL Server Management Studio:</h4>
+            <p>Ein Tool zur Verwaltung von Microsoft SQL Server-Datenbanken. Nützlich falls PuTTY mal nicht
+                funktioniert.</p>
+
+            <h4>SAP HANA Cockpit:</h4>
+            <p>Ein Tool zur Verwaltung von SAP HANA-Datenbanken.</p>
         </section>
 
         <section id="praxisauftrag4">
             <h2>Praxisauftrag 4: Wie setzt man eine Linux-Testdatenbank (ORATWSB) neu auf?</h2>
-            <p>Die Linux-Testdatenbank SVRLSBWDBT01.ZZ.COOP.CH musste neu aufgesetzt werden. ...</p>
-            <!-- Add the rest of your content here -->
-            <img src="placeholder4.jpg" alt="Linux Testdatenbank Bild 1">
-            <!-- Add more content and images as needed -->
+            <p>Die Linux-Testdatenbank SVRLSBWDBT01.ZZ.COOP.CH musste neu aufgesetzt werden. Dies habe ich mit Hilfe
+                dieser Confluence-Anleitung umgesetzt: <a
+                    href="https://confluence.coop.ch/display/db/Installation%3A+NONSAP+Datenbank">https://confluence.coop.ch/display/db/Installation%3A+NONSAP+Datenbank</a>
+            </p>
+
+            <h3>Daten finden</h3>
+            <p>Um jedoch überhaupt zu starten, musste ich wichtige Daten, die ich in den weiteren Schritten benötigen
+                werde, in Erfahrung bringen. Im Ticket steht bereits eine wichtige Information, nämlich ob der Server in
+                der Test, Prod oder Dev Umgebung erstellt werden soll.</p>
+
+            <h4>Instanz/SID:</h4>
+            <p>Die Instanz oder auch SID genannt, findet man sehr schnell. Zuerst muss man sich mit dem physischen
+                Server verbinden. Anschliessend gibt man folgende Querys ein:</p>
+            <pre>
+                $ suo #Benutzt den richtigen Datenbankuser
+                $ pwd #Zeigt das momentane Arbeitsverzeichnis an(Working Directory)
+            </pre>
+
+            <h4>User:</h4>
+            <p>Den User kann man mit einem einzelnen Query herausfinden:</p>
+            <pre>
+                $ suosuper m
+            </pre>
+
+            <h4>Logische IP-Adresse:</h4>
+            <pre>
+                $ Ifconfig  #Zeigt Netzwerk Konfigurationen an
+                $ nslookup <Hostname>  #Lässt den User einen Hostname eingeben und gibt die dazugehörige Ip-Adresse und DNS zurück
+            </pre>
+
+            <h3>Installation Oracle Binaries</h3>
+            <p>Die Installation der Oracle Binaries musste ich zwei mal machen. Im Schritt 11 wird beschrieben, wie man
+                das Golden Image entpackt (Siehe Golden Image). Alle Schritte wurden in dieser Confluence-Anleitung
+                beschrieben: <a
+                    href="https://confluence.coop.ch/pages/viewpage.action?spaceKey=db&title=Installation%3A+Oracle+Binaries">https://confluence.coop.ch/pages/viewpage.action?spaceKey=db&title=Installation%3A+Oracle+Binaries</a>
+            </p>
+
+            <h4>Probleme beim Installieren</h4>
+            <p>/oracle Berechtigung</p>
+            <pre>
+                $ sudo chown oratwsb:dba /oracle/TWSB/oradumps/
+                $ sudo chmod 755 /oracle/TWSB/oradumps/
+            </pre>
+
+            <h4>Private- und Public Key finden</h4>
+            <pre>
+                $ cd .ssh
+                $ cat id_rsa
+                $ cat id_rsa.pub
+            </pre>
+
+            <h4>Instsoftw mount</h4>
+            <a
+                href="https://confluence.coop.ch/display/db/Share+Mount">https://confluence.coop.ch/display/db/Share+Mount</a>
+
+            <h4>Backup erstellen</h4>
+            <pre>
+                sqlplus -s w5_pump/$pass <<EOF
+                set feed off echo off timing off heading off pages 0
+                select DIRECTORY_PATH from dba_directories where directory_name = 'DATAPUMP';
+            </pre>
+
+            <h4>Toad Connection</h4>
+            <p>C:\oracle\instantclient_21_14 musste zu den Systemvariablen ORACLE_HOME, Path und den Uservariablen Path.
+                Ausserdem muss man in dem Registry Editor die beiden Einträge in dem
+                Computer\HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE Verzeichnis löschen.</p>
+
+            <h4>Probleme im OEM</h4>
+            <h5>Ssh connection funktioniert nicht</h5>
+            <p>Passwort von oraagent nochmal setzen</p>
+
+            <h5>Linux:</h5>
+            <pre>
+                read -p "Enter password of oraagent: " password; \
+                echo -e "${password}\n${password}" | sudo passwd oraagent
+            </pre>
+
+            <h5>AIX:</h5>
+            <pre>
+                read -p "Enter password of oraagent: " password; \
+                echo "oraagent:$password" | sudo chpasswd
+                sudo pwdadm -c oraagent
+            </pre>
         </section>
 
         <section id="praxisauftrag5">
             <h2>Praxisauftrag 5: Welche Probleme gibt es beim Installieren einer SAP Datenbank</h2>
-            <p>Einer meiner Aufträge war die Installation einer non SAP Datenbank. ...</p>
-            <!-- Add the rest of your content here -->
-            <img src="placeholder5.jpg" alt="SAP Datenbank Probleme Bild 1">
-            <!-- Add more content and images as needed -->
+            <p>Einer meiner Aufträge war die Installation einer non SAP Datenbank. Diesen Auftrag habe ich zusammen mit
+                Elias und mit Unterstützung von Kai und Sharmila bearbeitet. Jedoch hatten Elias und ich ein paar
+                Probleme auf dem Weg. Diese habe ich hier unten dokumentiert, mit der jeweiligen Lösung für das Problem:
+            </p>
+
+            <h3>Probleme und Lösungen</h3>
+            <h4>1. Problem:</h4>
+            <p>Fehlermeldung bekommen beim Check der DB, da der falsche Share gemountet wurde.</p>
+            <h5>Lösung:</h5>
+            <p>Anstatt dbsoft zu mounten habe ich instsoftw gemountet. <a
+                    href="https://confluence.coop.ch/pages/viewpage.action?spaceKey=db&title=Share+Mount">https://confluence.coop.ch/pages/viewpage.action?spaceKey=db&title=Share+Mount</a>
+            </p>
+
+            <h4>2. Problem:</h4>
+            <p>Es hat eine bestimmte Berechtigung für den orauser gefehlt, welche beim Checken der DB Fehlermeldungen
+                zurückgibt.</p>
+            <h5>Lösung:</h5>
+            <pre>
+                chown oraagent.dba /oracle
+            </pre>
+
+            <h4>3. Problem:</h4>
+            <p>Manche Files konnten nicht installiert werden, da zu wenig File System-Storage zugewiesen wurde.</p>
+            <h5>Lösung:</h5>
+            <p>Unix Solution hat die Memory und den File System-Storage angepasst.</p>
+
+            <h4>4. Problem:</h4>
+            <p>Listener reagiert nicht</p>
+            <h5>Lösung:</h5>
+            <p>Wir haben den Schritt 11 aus Versehen übersprungen, welcher den Listener nach dem Shutdown automatisch
+                wieder hochfährt. Deshalb mussten wir den Listener manuell starten.</p>
+
+            <h4>5. Problem:</h4>
+            <p>Änderungen wurden nicht gespeichert.</p>
+            <h5>Lösung:</h5>
+            <p>Der 1. Schritt muss nach jeder Anmeldung auf dem Server gemacht werden, da alle Änderungen im tmp File
+                gespeichert werden, welche nach dem Herunterfahren des Servers gelöscht werden.</p>
+
+            <h4>6. Problem:</h4>
+            <p>SSH-Verbindung Test fehlgeschlagen</p>
+            <h5>Lösung:</h5>
+            <p>Hier war das Passwort für die Verbindung falsch. Dieses haben wir dann neu gesetzt und die SSH-Verbindung
+                hat funktioniert. Wir mussten jedoch einen anderen Command wie in der Anleitung unten benutzen, nämlich:
+            </p>
+            <pre>
+                sudo passwd oraagent
+            </pre>
+
+            <h4>7. Problem:</h4>
+            <p>Fehlermeldung bei Remote Verbindung</p>
+            <h5>Lösung:</h5>
+            <p>Da wir den 5. Schritt der Anleitung vergessen haben, mussten wir einen Schritt mehr machen. Um den
+                Command eingeben zu können, wird ein:</p>
+            <pre>
+                sudo su - oraagent
+            </pre>
+            <p>davor benötigt. Ausserdem mussten wir den Agent mit dem folgenden Befehl stoppen:</p>
+            <pre>
+                ./agent_13.5.0.0.0/bin/emctl stop agent
+            </pre>
+            <p>Das Verzeichnis musste komplett geleert werden. Mit dem Command:</p>
+            <pre>
+                rm .bash_history
+            </pre>
+            <p>werden alle versteckten "bash_history"-Files gelöscht.</p>
+
+            <h3>Probleme bei Linux Bern Server</h3>
+            <h4>1. Problem:</h4>
+            <p>Es wurde der falsche DNS-Server in dem Config-File gesetzt, was dazu führte, dass der Server nach der
+                falschen IP-Adresse gesucht hat.</p>
+            <h5>Lösung:</h5>
+            <p>Mit VI das Config-File öffnen und die richtige IP-Adresse einsetzen.</p>
+
+            <h4>2. Problem:</h4>
+            <p>Lösung:</p>
+
+            <h3>Was ist ein Golden Image?</h3>
+            <p>Das sogenannte “Golden Image” ist ein standardisiertes Abbild eines vorkonfigurierten Systems und muss
+                somit immer auf dem neuesten Stand sein. Dies war hier nicht der Fall und ich entpackte eine alte
+                Version des Golden Images und konnte somit nochmals von vorne beginnen. Das Golden Image wird dazu
+                verwendet, bei der Neuinstallation von Datenbanken, alle Datenbanken-Konfigurationen, Oracle-Credentials
+                und noch weitere Einstellung einheitlich zu behalten. Dies ermöglicht es, eine neu erstellte Datenbank
+                einheitlich zu den bereits vorhandenen Datenbanken zu halten.</p>
         </section>
 
         <section id="praxisauftrag6">
             <h2>Praxisauftrag 6: Wie funktioniert das initScriptReplacer Skript?</h2>
-            <p>Ich habe von Kai einen Auftrag bekommen, eine Liste von Servern zu überprüfen: ...</p>
-            <!-- Add the rest of your content here -->
-            <img src="placeholder6.jpg" alt="initScriptReplacer Skript Bild 1">
-            <!-- Add more content and images as needed -->
+            <h3>Auftrag</h3>
+            <p>Ich habe von Kai einen Auftrag bekommen, eine Liste von Servern zu überprüfen: Ich musste auf jedem
+                Server ein bestimmtes Skript ausführen, welches alle Aktionen und Fehler in einer Log Datei im
+                Verzeichnis /tmp protokolliert. Da ich das Skript bloss ausführen musste und nicht wusste was dies tat,
+                habe ich Kai gefragt, ob ich den Code dieses Skripts anschauen könne? Daraufhin kam mir die Idee dieses
+                Skript zu dokumentieren welches ich nun mit dem Einverständnis von Kai machen konnte:</p>
+
+            <h3>Erklärung</h3>
+            <p>Dieses Skript führte ich mit diesem Befehl aus:</p>
+            <pre>
+                ls -l /etc/rc.d/rc2.d && /var/dbsoft/oracle/Scripts/PIST1/initScriptReplacer.sh
+            </pre>
+            <p>Dieser Befehl besteht aus 2 Anweisungen, welche durch das && getrennt werden. Der zweite Befehl wird mit
+                dem doppelten Ampersand nur ausgeführt, wenn auch der erste erfolgreich war. Die erste Anweisung gibt
+                alle Dateien und Verzeichnisse in einer übersichtlichen Art aus:</p>
+            <p>Die zweite Anweisung führt das eigentliche Skript aus. Dafür muss es durch 5 Unterverzeichnisse gehen:
+                var/dbsoft/oracle/Scripts/PIST1</p>
+            <p>Das dbsoft-Verzeichnis ist ein externes File System, welches normalerweise bei der Installierung der
+                Server standartmässig gemountet sein sollte. Jedoch kann es dazu kommen dass eine Fehlermeldung
+                angezeigt wird. Dies entsteht meistens dadurch, dass das Skript nicht gefunden werden konnte. In diesem
+                Fall existiert das Skript nicht, man hat sich vertippt oder die Share (externes File System) wurde nicht
+                gemountet.</p>
+            <p>In dem Oracle-Verzeichnis befinden sich alle Oracle relevanten Dateien wie SQL, Linux- und AIX -Software
+                und natürlich auch die Skripts.</p>
+            <p>Das Skripts-Verzeichnis besteht aus weiteren Verzeichnissen, in denen verschiedene Skripts gelagert
+                werden, welche einen Bezug zu Oracle Systemen haben. Da das gewünschte Skript von Kai erstellt wurde,
+                gehen wir in das PIST1-Verzeichnis.</p>
+            <p>In dem PIST1-Verzeichnis befinden sich alle Skripts, die von Kai erstellt wurden. Inklusive dem
+                initScriptReplacer Skript welches wir ausführen wollen.</p>
+
+            <h3>Skript Breakdown</h3>
+            <p>Das "initScript Replacer"-Skript besteht aus ca. 140 Linien Bash-Code.</p>
+
+            <h4>Linie 1-12</h4>
+            <p>Dieser Teil des Codes (Bash script header) steht in Kommentaren und wird durch die grüne Farbe
+                (Formatierung von Visual Studio Code) und dem # am Anfang von jeder Linie signalisiert. Hier sind die
+                wichtigsten Informationen über das Skript zu finden. Diese kann man in der Regel jedes mal Copy-Paste
+                und die jeweiligen Daten austauschen. Für das Skript relevante Daten sind die drei Untersten: Summary
+                (Zusammenfassung), Usage (Verwendung) und Versions.</p>
+
+            <h5>Author, Department, Phone, E-Mail</h5>
+            <p>“Kai Pistorius, InfEntSapBasisDb, 061 336 75 24, kai.pistorius@coop.ch” Dies sind jeweils die Daten des
+                Autors.</p>
+
+            <h5>Zusammenfassung</h5>
+            <p>“Dieses Skript kann auf AIX verwendet werden, um die Oracle Stop-Start-Skripte neu zu verknüpfen.”
+                Verknüpft die Oracle “Stop-Start-Skripte” auf dem AIX System neu.</p>
+
+            <h5>Verwendung</h5>
+            <p>“./initScriptReplacer.sh” mit ./ wird das File im aktuellen Verzeichnis ausgeführt</p>
+
+            <h5>Version</h5>
+            <p>“1.0 (PIST1 - 31.05.2024) Initial version” Version 1.0 bedeutet typischerweise die erste stabile
+                Veröffentlichung eines Softwareprodukts oder in diesem Fall eines Skriptes. Bei einem Release werden in
+                Klammern noch die User-ID und das Datum erfasst.</p>
+
+            <h4>Linie 13</h4>
+            <p>Ab dieser Zeile fängt das eigentliche Skript an. Einfach erklärt, wird in dieser Zeile eine Variable mit
+                einem festgelegten Wert eingeführt und als Schreibgeschützt markiert (Read-only mit der Option -r).</p>
+
+            <h4>Linie 15-25</h4>
+            <p>In diesem Teil wird die Methode writeLog deklariert. Diese Methode (in Bash function genannt) besteht aus
+                3 Teilen:</p>
+
+            <h5>Variablen</h5>
+            <p>Die drei Variablen logType, logMessage und dateTimeNow werden als local initialisiert. Somit können diese
+                Variablen nur innerhalb der Funktion verwendet werden. Standardmässig werden Variablen immer global
+                gesetzt (können ausserhalb der Methode verwendet werden). Dies kann zu vielen Problemen führen, vor
+                allem wenn die Namen der Variablen erneut verwendet werden.</p>
+
+            <h5>Logik</h5>
+            <p>Das Skript führt hier mehrere Operationen aus, um die entsprechende Log-Nachricht zu erstellen. Es
+                verarbeitet den Eingabeparameter ($1) und formatiert (tr = translate) alle Kleinbuchstaben zu
+                Grossbuchstaben. Der zweite Parameter wird auf die Log-Nachricht-Variable gesetzt. Ausserdem wird die
+                aktuelle Zeit und Datum wie folgt formatiert: Jahr, Monat, Tag, Stunde, Minute, Sekunde.</p>
+
+            <h5>Ausgabe</h5>
+            <p>Die Ausgabe ist relativ komplex mit vielen kleinen Einstellungen. Hier ist ein kleines Breakdown der
+                einzelnen Optionen:</p>
+            <ul>
+                <li>printf ist ein Befehl, der eine formatierte Ausgabe gibt.</li>
+                <li>%-25s bedeutet, dass die dritte Variable dateTimeNow linksbündig ausgerichtet wird und mindestens 25
+                    Zeichen lang ist.</li>
+                <li>%-10s bedeutet, dass die erste Variable logType linksbündig ausgerichtet wird und mindestens 10
+                    Zeichen lang ist.</li>
+                <li>[%s] formatiert die zweite Variable logMessage in eckige Klammern.</li>
+                <li>\n fügt einen Zeilenumbruch hinzu und funktioniert in anderen Programmiersprachen (z.B Java) gleich.
+                </li>
+                <li>dateTimeNow, logType und logMessage sind die Variablen die auf Zeile 16-18 deklariert und auf Zeile
+                    19-21 initialisiert wurden.</li>
+                <li>&gt;&2 leitet die Ausgabe an den Standardfehler (stderr) um. Das bedeutet, dass die formatierte
+                    Log-Nachricht an den Fehlerausgabe-Stream gesendet wird.</li>
+            </ul>
+
+            <h4>Linie 27-33</h4>
+            <p>Diese Funktion überprüft, ob das Skript von einem unerlaubten Benutzer ausgeführt wird.</p>
+
+            <h5>if</h5>
+            <p>Hier wird der aktuelle Benutzer geprüft: ist er root? fängt er mit ora an? ist er in der /etc/passwd
+                Datei vorhanden? Wenn eine dieser Überprüfungen übereinstimmt, wird die Fehlermeldung writeLog
+                ausgeführt und das Script wird beendet. Wenn die Überprüfung nicht stimmt, wird eine erfolgreiche
+                Meldung ausgegeben und das Script läuft weiter.</p>
+            <pre>
+                whoami gibt den Namen des aktuellen Users zurück (gleich wie der pwd command welcher das aktuelle Verzeichnis ausgibt).
+            </pre>
+
+            <h4>Linie 47-50</h4>
+            <p>Diese Funktion hat nur einen bestimmten Nutzen: Sie führt die sogenannten Prerequisites (Voraussetzung)
+                aus.</p>
+
+            <h4>Linie 52-64</h4>
+            <p>Die Funktion mountShare sorgt dafür, dass die NFS-Share (Network File System) an einem bestimmten
+                Verzeichnis (/var/dbsoft) gemountet wird.</p>
+
+            <pre>
+                sudo mkdir /var/dbsoft
+                Dieser Befehl erstellt das Verzeichnis /var/dbsoft mit administrativen Rechten (sudo).
+                &amp;&gt;/dev/null
+                Leitet alle Meldungen (auch Fehlermeldungen) nach /dev/null, sodass keine Ausgabe im Terminal erscheint, auch wenn das Verzeichnis bereits existiert.
+            </pre>
+            <p>Nun kommt ein if-Statement welches verschiedene Dinge prüft:</p>
+            <pre>
+                df /var/dbsoft/
+                Zeigt die Dateisystem Nutzung für das Verzeichnis /var/dbsoft.
+                tail -n +2
+                Gibt nur die letzten 2 Zeilen der Ausgabe aus (Überspringt die Kopfzeile).
+                awk "{print \$1}"
+                Extrahiert die erste Spalte der Ausgabe, welche mit dem 1. Parameter übereinstimmen (Namen des Dateisystems).
+                != "naspnglobal.hs.coop.ch:/orasw"
+                Überprüft, ob das NFS nicht bereits gemountet ist.
+            </pre>
+            <p>Wenn das Verzeichnis noch nicht gemountet ist, wird die folgende Zeile ausgeführt:</p>
+            <pre>
+                writeLog "INFO" "Mounting share to /var/dbsoft"
+                Protokolliert eine Informationsmeldung, dass der Share gemountet wird.
+            </pre>
+            <p>Dann kommt noch ein If-Statement, welches prüft, ob das System AIX ist. Wenn dieser Fall “true” ist, also
+                übereinstimmt, dann wird der Share ohne weitere Konfigurationen in dem /var/dbsoft Verzeichnis
+                gemountet. Wenn dieser Fall jedoch “false” ist, also nicht übereinstimmt (kein AIX-System ist), dann
+                wird der Share mit speziellen Konfigurationen auf das gleiche Verzeichnis gemountet:</p>
+            <ul>
+                <li>-t nfs Gibt an, dass das zu mountende Dateisystem ein NFS (Network File System) ist.</li>
+                <li>-o exec Eine Option, die angibt, dass das Ausführen von Binärdateien auf dem gemounteten Dateisystem
+                    erlaubt ist.</li>
+                <li>-o v3 Gibt an, dass die Version 3 des NFS-Protokolls verwendet werden soll.</li>
+            </ul>
+            <p>Wenn das erste if-Statement, welches prüft, ob das Verzeichnis noch nicht gemountet ist, jedoch “false”
+                zurückgibt, dann wird die Fehlermeldung zurückgegeben, welche sagt, dass der Share bereits gemountet
+                wurde. Das Skript läuft somit weiter ohne etwas auszuführen.</p>
+
+            <h4>Linie 66-128</h4>
+            <p>Dies ist mit Abstand die grösste und komplexeste Funktion. Deshalb werde ich diese in 4 Pakete aufteilen.
+            </p>
+
+            <h5>Paket 1</h5>
+            <pre>
+                /etc/rc.d/dbora*
+                Gibt an, dass alle Dateien, die im Verzeichnis /etc/rc.d/ beginnen mit "dbora" gelöscht werden sollen.
+                Auf der nächsten Zeile werden 2 Arrays initialisiert, welche noch keinen Wert haben.
+            </pre>
+
+            <h5>Paket 2</h5>
+            <pre>
+                grep "/oracle/" /etc/oratab
+                Durchsucht die Datei /etc/oratab mit dem Suchmuster den Text /oracle/
+                grep -vE ' *#'
+                -v bedeutet, dass die Zeilen, die dem Muster entsprechen, ausgeschlossen werden sollen, und -E für reguläre Ausdrücke steht.
+                cut -d":" -f1)
+                Der cut Befehl teilt den Text. Das -d ist der sogenannte Trennzeichen-Schalter, wobei das : als Trennzeichen dient. -f1 Gibt an, dass das erste Feld (vor dem :) ausgegeben werden soll.
+            </pre>
+
+            <h5>Paket 3</h5>
+            <p>In diesem Paket wird die for-Schleife verwendet, welche eine Liste von Oracle-SIDs (System Identifier)
+                und spezifische Aktionen für jede SID durchläuft. Diese Schleife besteht wiederum aus mehreren if-, for-
+                und while-Schleifen:</p>
+            <pre>
+                Auf der ersten Linie wird die Funktion writeLog aufgerufen.
+                Danach wird Skript ora_SDB3U.sh in das Verzeichnis /etc/rc.d/init.d/ mit dem neuen Namen ora_$sid.sh
+                Mit sudo chmod 755 wird dem File die read, write, und execute Berechtigungen gegeben.
+                Nun werden die beiden Arrays, die auf Zeile 69 und 70 initialisiert wurden, einen Wert hinzugefügt (deklariert).
+                Mit ls -1 /etc/rc.d/rc2.d/S*$sid 2>&amp;/dev/null | head -1 werden alle Dateien im Verzeichnis /etc/rc.d/rc2.d/ aufgelistet, deren Namen mit dem Zeichen S (dann mit beliebig vielen Zeichen (*) und einer SID ($sid) beginnen. Die Ausgabe wird zudem beschränkt, so dass nur die erste Datei aus der Auflistung angezeigt wird (head -1). Jegliche Fehlermeldungen werden wie  immer in das /dev/null Verzeichnis umgeleitet.
+            </pre>
+            <p>Auf der Zeile 79 beginnt die erste if-Schleife der Funktion. Diese Schleife ist eine Überprüfung, welche
+                sicherstellt, dass knum und snum innerhalb eines bestimmten Bereichs liegen, falls sie ungültige oder
+                unerwartete Werte enthalten. Diese If-Schleife besteht aus 3 or-Statements. Wir verwenden das Beispiel
+                von knum= 99:</p>
+            <pre>
+                -z Prüft, ob Wert leer ist. = false
+                -le 0 (less-equals) Prüft, ob Wert kleiner oder gleich 0 ist = false.
+                -ge 90 (greater-equals) Prüft, ob Wert grösser oder gleich 99 ist = true
+                Da einer der Überprüfungen true war, wurde in diesem Fall der Body der Schleife ausgeführt. Also werden die Werte in knum und knumCalc auf 1 gesetzt.
+            </pre>
+            <pre>
+                Diese for-Schleife befindet sich innerhalb einer anderen for-Schleife.
+                Hier wird für jedes File in dem angegebenen Verzeichnis ein ulink (entfernen) ausgeführt.
+            </pre>
+
+            <p>Hier ist die erste while-Schleife, welche überprüft, ob der Wert von snum, einzigartig ist und nicht in
+                einem Array (snums) vorkommt. Wenn snum auf 0 oder ein negativer Wert fällt, wird eine Fehlermeldung
+                ausgegeben, die nächste Zeile wird ausgeführt.</p>
+            <pre>
+                " ${snums[*]} " Der Array snums wird in eine Zeichenkette umgewandelt und bei jedem Wert wird ein Leerzeichen davor und danach gesetzt.
+                [[:space:]]${snum}[[:space:]] Hier wird nach Werten gesucht, welche von Leerzeichen umgeben sind.
+                snum=$((snum - 1)) Verringert den Wert von snum um 1.
+                Es wird nochmal geprüft, ob der Wert kleiner oder gleich (-le) ist, um Fehler auszuschliessen.
+                Wenn der Wert jedoch grösser als 0 ist, dann wird der Wert snum aktualisiert.
+            </pre>
+            <p>Die nächste while-Schleife macht das gleiche wie die snum Schleife davor, jedoch mit dem Unterschied,
+                dass der Wert knum benutzt wird.</p>
+
+            <p>In diesen beiden letzten if-Schleifen wird geprüft, ob die Werte knum und snum kleiner als 10 sind. Wenn
+                dies der Fall ist, wird ein 0 vor die Werte hinzugefügt. z.B. 5 (&lt;10) wird zu 05.</p>
+
+            <h5>Paket 4</h5>
+            <p>In diesem letzten Paket wird die Debugging-Ausgabe deaktiviert, erstellt symbolische Links zu einem
+                Init-Skript, protokolliert diese Aktionen und fügt die Start- und Killnummern zu Arrays hinzu. Somit
+                kann man sichergestellt, dass das Skript korrekt gestartet und gestoppt wurde.</p>
+            <pre>
+                snums+=("$snum")
+                Es wird der aktuelle und verarbeitete Wert snum dem Array snum hinzugefügt.
+            </pre>
+
+            <h4>Linie 130-138</h4>
+            <pre>
+                grep "/oracle/" /etc/oratab
+                Filtert Zeilen, in der Datei  /oracle/oratab nach “/oracle”.
+                grep -vE ' *#'
+                Schliesst Kommentare (Zeile die mit #beginnen) aus.
+                cut -d":" -f1
+                Extrahiert das erste Wort (SID) von jeder Zeile, welche durch Doppelpunkte getrennt wurden.
+                for sid in $
+                Iteriert (das was eine for-Schleife macht) über jede gefundene SID.
+            </pre>
+
+            <h4>Linie 141-144</h4>
+            <p>Dies führt alle Funktionen aus, da diese von Zeile 15-138 nur definiert und nicht direkt ausgeführt
+                wurden.</p>
+
+            <h3>Begriffe</h3>
+            <h4>Skript</h4>
+            <p>Eine Datei mit ausführbarem Code, die Anweisungen für ein Betriebssystem, Server oder eine Anwendung
+                enthält.</p>
+
+            <h4>Log Datei</h4>
+            <p>Eine Datei, die Ereignisse, Fehler oder andere Informationen über die Ausführung von Programmen
+                protokolliert.</p>
+
+            <h4>Verzeichnis</h4>
+            <p>Ein Container, der Dateien und andere Verzeichnisse organisiert und speichert, so wie ein Ordner.</p>
+
+            <h4>SID</h4>
+            <p>System Identifier, eine eindeutige Kennung für eine Oracle-Datenbankinstanz.</p>
+
+            <h4>Header</h4>
+            <p>Der Anfangsabschnitt einer Datei oder eines Dokuments, der Metadaten enthält.</p>
+
+            <h4>Kommentar</h4>
+            <p>Eine Anmerkung im Code, die zur Erklärung dient und nicht ausgeführt wird.</p>
+
+            <h4>Befehl</h4>
+            <p>Eine Anweisung an ein Computersystem, eine bestimmte Aktion auszuführen.</p>
+
+            <h4>Externes File System</h4>
+            <p>Ein Dateisystem, das von einem externen Speichermedium eingebunden wird.</p>
+            <p>mounting: Der Prozess des Einbindens eines Dateisystems in die Verzeichnisstruktur eines Betriebssystems.
+            </p>
+
+            <h4>SQL</h4>
+            <p>Structured Query Language, eine Sprache zur Verwaltung und Abfrage von Datenbanken.</p>
+
+            <h4>Linux</h4>
+            <p>Ein Open-Source-Betriebssystem, das auf Unix basiert.</p>
+
+            <h4>AIX</h4>
+            <p>Advanced Interactive eXecutive, ein Unix-basiertes Betriebssystem von IBM.</p>
+
+            <h4>Oracle</h4>
+            <p>Ein multinationales Unternehmen, das Datenbanksoftware und -technologie entwickelt.</p>
+
+            <h4>Symbolischer Link</h4>
+            <p>Eine Datei, die auf eine andere Datei oder ein Verzeichnis verweist.</p>
+
+            <h4>Breakdown</h4>
+            <p>Eine detaillierte Analyse oder Aufschlüsselung eines Problems oder Prozesses.</p>
+
+            <h4>Variable</h4>
+            <p>Ein benannter Speicherort, der einen Wert speichern kann.</p>
+
+            <h4>Methode/Funktion</h4>
+            <p>Ein wiederverwendbarer Code Block, der eine bestimmte Aufgabe ausführt.</p>
+
+            <h4>Initialisierung</h4>
+            <p>Der Prozess des Setzens eines Anfangswerts für eine Variable.</p>
+
+            <h4>Deklarierung</h4>
+            <p>Die Definition einer Variable oder Funktion, ohne ihr einen Wert zuzuweisen.</p>
+
+            <h4>global</h4>
+            <p>Eine Variable oder Funktion, die im gesamten Programm zugänglich ist.</p>
+
+            <h4>Operation</h4>
+            <p>Eine Aktion, die auf Daten ausgeführt wird, wie Addition oder Vergleich.</p>
+
+            <h4>Parameter</h4>
+            <p>Ein Wert, der an eine Funktion übergeben wird, um ihre Ausführung zu beeinflussen.</p>
+
+            <h4>root</h4>
+            <p>Der Superuser oder Administrator eines Unix- oder Linux-Systems mit allen Rechten.</p>
+
+            <h4>true</h4>
+            <p>Ein boolescher Wert, der "wahr" darstellt.</p>
+
+            <h4>false</h4>
+            <p>Ein boolescher Wert, der "falsch" darstellt.</p>
+
+            <h4>Array</h4>
+            <p>Eine Datenstruktur, die eine Sammlung von Elementen desselben Typs speichert.</p>
+
+            <h4>if-Schleife</h4>
+            <p>Eine bedingte Anweisung, die Codeblöcke basierend auf einem Wahrheitswert ausführt.</p>
+
+            <h4>for-Schleife</h4>
+            <p>Eine Schleife, die eine bestimmte Anzahl von Iterationen durchläuft.</p>
+
+            <h4>while-Schleife</h4>
+            <p>Eine Schleife, die wiederholt Code ausführt, solange eine Bedingung erfüllt ist.</p>
+
+            <h4>&&</h4>
+            <p>Ein logischer Operator, der wahr ist, wenn alle Operanden wahr sind.</p>
+
+            <h4>||</h4>
+            <p>Ein logischer Operator, der wahr ist, wenn mindestens einer der Operanden wahr ist.</p>
+
+            <h4>Debugging</h4>
+            <p>Der Prozess des Identifizierens und Behebens von Fehlern in Software.</p>
+
+            <section id="taetigkeiten">
+
+            <h3>Wichtigste Tätigkeiten</h3>
+            <p>IT Entwicklung Datenbanken</p>
+            <ul>
+                <li>Installation & Einrichtung von Oracle Datenbanken (Flashback, WAMAS, Oracle Software, Backup)</li>
+                <li>Installation SAP DB</li>
+                <li>Linux und AiX Datenbanken bearbeiten oder einrichten</li>
+                <li>Tools: PuTTY/SuperPuTTY, OEM, Toad for Oracle, SQL Server Management Studio, SAP HANA Cockpit</li>
+                <li>Fehler beheben durch vorgefertigte Scripts</li>
+                <li>initScriptReplacer</li>
+                <li>Durchlauf von Datenbank-Test</li>
+            </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Noah Beetschen. Alle Rechte vorbehalten.</p>
-    </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
