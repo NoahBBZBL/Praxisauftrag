@@ -1,0 +1,1 @@
+# Geschäftsprozess Logistik bei der Genossenschaft Coop
